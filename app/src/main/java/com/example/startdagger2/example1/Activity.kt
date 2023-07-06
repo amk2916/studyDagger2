@@ -10,7 +10,7 @@ class Activity {
     @Inject
     lateinit var monitor: Monitor
 
-//    init {
-//        Component().inject(this)
-//    }
+    init {
+        DaggerINewComponent.builder().build().inject(this)
+    }
 }

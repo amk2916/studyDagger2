@@ -5,5 +5,7 @@ import dagger.Component
 @Component
 interface INewComponent {
 
+    fun getMonitor():Monitor
+
     fun inject(activity: Activity)
 }

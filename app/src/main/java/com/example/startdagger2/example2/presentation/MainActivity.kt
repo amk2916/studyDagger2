@@ -12,5 +12,6 @@ class MainActivity : AppCompatActivity() {
 
         val activity = Activity()
         activity.monitor.toString()
+        activity.computer.toString()
     }
 }

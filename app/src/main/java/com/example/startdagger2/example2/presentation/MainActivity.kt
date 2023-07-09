@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val activity = Activity()
-        activity.monitor.toString()
         activity.computer.toString()
     }
 }

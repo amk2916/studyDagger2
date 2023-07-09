@@ -18,6 +18,24 @@ class ComputerModule {
         return Keyboard()
     }
 
+    @Provides
+    fun provideMemory():Memory = Memory()
+
+    @Provides
+    fun provideProcessor():Processor = Processor()
+
+    @Provides
+    fun provideStorage():Storage = Storage()
+
+    @Provides
+    fun computerTower(
+        storage: Storage,
+        memory: Memory,
+        processor: Processor
+    ):ComputerTower = ComputerTower(storage, memory, processor)
+
+
+
 
     @Provides
     fun provideComputer(

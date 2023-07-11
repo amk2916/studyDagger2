@@ -6,7 +6,7 @@ import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
-@Singleton
+@AppScope
 @Component(modules = [DataModule::class, DomainModule::class])
 interface AppComponent{
 

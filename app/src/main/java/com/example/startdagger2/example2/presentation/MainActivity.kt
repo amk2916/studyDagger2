@@ -3,6 +3,7 @@ package com.example.startdagger2.example2.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.startdagger2.R
+import com.example.startdagger2.example2.ExampleApp
 import com.example.startdagger2.example2.di.DaggerAppComponent
 import javax.inject.Inject
 
@@ -13,9 +14,8 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var viewModel: ExampleViewModel
 
-    val component by lazy {
-        DaggerAppComponent.factory()
-            .create(this, System.currentTimeMillis())
+    private val component by lazy {
+        (application as ExampleApp).component
     }
 
 

@@ -11,7 +11,8 @@ import dagger.Module
 interface DataModule {
     @Binds
      fun bindExampleLocalDataSource(
-        impl: ExampleLocalDataSourceImpl)
+        impl: ExampleLocalDataSourceImpl
+    )
     : ExampleLocalDataSource
 
     @Binds

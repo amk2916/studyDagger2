@@ -7,12 +7,9 @@ import com.example.startdagger2.example2.domain.ExampleUseCase
 import javax.inject.Inject
 
 class ViewModelFactory @Inject constructor(
-    private val exampleUseCase: ExampleUseCase
+    private val viewModels:@JvmSuppressWildcards Map<String, ViewModel>// в качестве ключа прилетает название класс
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
-        if(modelClass == ExampleViewModel::class.java){
-            return ExampleViewModel(exampleUseCase) as T
-        }
-        throw Exception("Unknown viewModel class $modelClass")
+        return viewModels[modelClass.simpleName] as T // создается view model того класса, название которого передали
     }
 }

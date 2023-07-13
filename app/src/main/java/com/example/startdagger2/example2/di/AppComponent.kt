@@ -2,6 +2,7 @@ package com.example.startdagger2.example2.di
 
 import android.content.Context
 import com.example.startdagger2.example2.presentation.MainActivity
+import com.example.startdagger2.example2.presentation.MainActivity2
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -11,6 +12,7 @@ import javax.inject.Singleton
 interface AppComponent{
 
     fun inject(mainActivity: MainActivity)
+    fun inject(mainActivity: MainActivity2)
 
     @Component.Factory
     interface AppComponentFactory{

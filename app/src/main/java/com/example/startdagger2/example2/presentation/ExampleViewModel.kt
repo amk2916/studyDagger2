@@ -11,6 +11,6 @@ class ExampleViewModel @Inject constructor(
 
     fun method() {
         useCase()
-        Log.d("ViewModel", "viewModel class$this")
+        Log.d("ViewModel", "$this")
     }
 }

@@ -11,10 +11,11 @@ import dagger.Subcomponent
 interface ActivitySubComponent {
 
     @Subcomponent.Factory
-    interface SubComponentFactory{
+    interface SubComponentFactory {
         fun create(
-            @BindsInstance key_id: String
-        ):ActivitySubComponent
+            @IdKeyQualifier @BindsInstance key_id: String,
+            @NameQualifier @BindsInstance name: String
+        ): ActivitySubComponent
     }
 
     fun inject(mainActivity: MainActivity)

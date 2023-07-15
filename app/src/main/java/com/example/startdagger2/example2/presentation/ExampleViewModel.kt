@@ -6,11 +6,12 @@ import com.example.startdagger2.example2.domain.ExampleUseCase
 import javax.inject.Inject
 
 class ExampleViewModel @Inject constructor(
-    private val useCase: ExampleUseCase
+    private val useCase: ExampleUseCase,
+    private val id_key: String
 ) : ViewModel() {
 
     fun method() {
         useCase()
-        Log.d("ViewModel", "$this")
+        Log.d("ViewModel", "$this id_key $id_key")
     }
 }

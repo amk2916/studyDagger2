@@ -29,10 +29,9 @@ class MainActivity : AppCompatActivity() {
 
     private val component by lazy {
         (application as ExampleApp).component
+            .activityComponentFactory()
+            .create("MainActivity")
     }
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //вызываем до метода супер, для того чтобы были проинициализированны
